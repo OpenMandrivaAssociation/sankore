@@ -22,6 +22,7 @@ BuildRequires:	quazip-devel
 BuildRequires:	qtsingleapplication-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	freetype2-devel
+BuildRequires:	desktop-file-utils
 
 %description
 The Sankore project (formerly known as Uniboard) has for 
