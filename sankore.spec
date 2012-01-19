@@ -19,6 +19,7 @@ BuildRequires:	qt4-devel
 BuildRequires:	zlib-devel
 BuildRequires:	xpdf-devel
 BuildRequires:	quazip-devel
+BuildRequires:	phonon-devel
 BuildRequires:	qtsingleapplication-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	freetype2-devel
