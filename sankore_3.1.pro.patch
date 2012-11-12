@@ -1,0 +1,53 @@
+diff --git a/Sankore_3.1.pro b/Sankore_3.1.pro
+index aff1440..8d06092 100644
+--- a/Sankore_3.1.pro
++++ b/Sankore_3.1.pro
+@@ -4,7 +4,7 @@ TEMPLATE = app
+ THIRD_PARTY_PATH=../Sankore-ThirdParty
+ 
+ CONFIG += debug_and_release \
+-   no_include_pwd
++   no_include_pwd qtsingleapplication
+ 
+ VERSION_MAJ = 1
+ VERSION_MIN = 35 
+@@ -30,9 +30,13 @@ QT += xml
+ QT += script
+ QT += xmlpatterns
+ 
++XPDF_DIR     = "/usr/include/xpdf"
+ INCLUDEPATH += src
++INCLUDEPATH += "/usr/include/quazip"
++INCLUDEPATH += "$$XPDF_DIR"
++INCLUDEPATH += "$$XPDF_DIR/goo"
++INCLUDEPATH += "$$XPDF_DIR/splash"
+ 
+-include($$THIRD_PARTY_PATH/libs.pri)
+ include(src/adaptors/adaptors.pri)
+ include(src/api/api.pri)
+ include(src/board/board.pri)
+@@ -53,12 +57,10 @@ include(src/transition/transition.pri)
+ DEPENDPATH += src/pdf-merger
+ INCLUDEPATH += src/pdf-merger
+ include(src/pdf-merger/pdfMerger.pri)
+-DEPENDPATH += $$THIRD_PARTY_PATH/quazip/
+-INCLUDEPATH += $$THIRD_PARTY_PATH/quazip/
+-include($$THIRD_PARTY_PATH/quazip/quazip.pri)
+-DEPENDPATH += $$THIRD_PARTY_PATH/trolltech/singleapplication
+-INCLUDEPATH += $$THIRD_PARTY_PATH/trolltech/singleapplication
+-include($$THIRD_PARTY_PATH/trolltech/singleapplication/qtsingleapplication.pri)
++
++LIBS        += "-lfreetype"
++LIBS        += "-lxpdf"
++LIBS        += "-lquazip"
+ 
+ FORMS += resources/forms/mainWindow.ui \
+    resources/forms/preferences.ui \
+@@ -75,7 +77,6 @@ UB_ETC.files = resources/etc
+ UB_I18N.files = resources/i18n/*.qm
+ UB_LIBRARY.files = resources/library
+ UB_FONTS.files = resources/fonts
+-UB_THIRDPARTY_INTERACTIVE.files = thirdparty/interactive
+ 
+ DEFINES += UBVERSION=\"\\\"$${LONG_VERSION}\"\\\" \
+    UBVERSION_RC=$$VERSION_RC
