@@ -7,7 +7,7 @@
 
 Name:		sankore
 Version:	3.1
-Release:	1
+Release:	2
 Summary:	The open-source software suite for digital teachers
 License:	GPLv3+ or LGPLv3+
 Group:		Education
@@ -22,7 +22,7 @@ BuildRequires:	quazip-devel
 BuildRequires:	phonon-devel
 BuildRequires:	qtsingleapplication-devel
 BuildRequires:	libgomp-devel
-BuildRequires:	freetype2-devel
+BuildRequires:	pkgconfig(freetype2)
 BuildRequires:	desktop-file-utils
 
 %description
