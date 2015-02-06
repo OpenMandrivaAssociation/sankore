@@ -7,7 +7,7 @@
 
 Name:		sankore
 Version:	3.1
-Release:	2
+Release:	3
 Summary:	The open-source software suite for digital teachers
 License:	GPLv3+ or LGPLv3+
 Group:		Education
