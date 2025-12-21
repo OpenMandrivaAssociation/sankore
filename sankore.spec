@@ -15,6 +15,7 @@ URL:		https://github.com/Sankore/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		sankore_3.1.pro.patch
 
+BuildRequires:	make
 BuildRequires:	qt4-devel
 BuildRequires:	zlib-devel
 BuildRequires:	xpdf-devel
